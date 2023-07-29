@@ -1,0 +1,533 @@
+ugui.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 23 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+ugui.c:8215:46: warning: Either the condition 'img->img!=((void*)0)' is redundant or there is possible null pointer dereference: (struct UG_BMP*)img->img. [nullPointerRedundantCheck]
+            obj->a_abs.xe = obj->a_rel.xs + ((UG_BMP*)img->img)->width + a.xs;
+                                             ^
+ugui.c:8221:28: note: Assuming that condition 'img->img!=((void*)0)' is not redundant
+            if ( (img->img != NULL) && (img->type & IMG_TYPE_BMP) )
+                           ^
+ugui.c:8215:46: note: Null pointer dereference
+            obj->a_abs.xe = obj->a_rel.xs + ((UG_BMP*)img->img)->width + a.xs;
+                                             ^
+ugui.c:8216:46: warning: Either the condition 'img->img!=((void*)0)' is redundant or there is possible null pointer dereference: (struct UG_BMP*)img->img. [nullPointerRedundantCheck]
+            obj->a_abs.ye = obj->a_rel.ys + ((UG_BMP*)img->img)->height + a.ys;
+                                             ^
+ugui.c:8221:28: note: Assuming that condition 'img->img!=((void*)0)' is not redundant
+            if ( (img->img != NULL) && (img->type & IMG_TYPE_BMP) )
+                           ^
+ugui.c:8216:46: note: Null pointer dereference
+            obj->a_abs.ye = obj->a_rel.ys + ((UG_BMP*)img->img)->height + a.ys;
+                                             ^
+ugui.c:5412:5: style: Redundant initialization for 'c'. The initialized value is overwritten before it is read. [redundantInitialization]
+   c=str;
+    ^
+ugui.c:5405:12: note: c is initialized
+   char* c = str;
+           ^
+ugui.c:5412:5: note: c is overwritten
+   c=str;
+    ^
+ugui.c:4943:9: style: The scope of the variable 'chr' can be reduced. [variableScope]
+   char chr;
+        ^
+ugui.c:4978:9: style: The scope of the variable 'chr' can be reduced. [variableScope]
+   char chr;
+        ^
+ugui.c:5262:10: style: The scope of the variable 'push_pixel' can be reduced. [variableScope]
+   void(*push_pixel)(UG_COLOR);
+         ^
+ugui.c:5390:11: style: The scope of the variable 'sl' can be reduced. [variableScope]
+   UG_U16 sl,rc,wl;
+          ^
+ugui.c:5390:17: style: The scope of the variable 'wl' can be reduced. [variableScope]
+   UG_U16 sl,rc,wl;
+                ^
+ugui.c:5529:10: style: The scope of the variable 'objstate' can be reduced. [variableScope]
+   UG_U8 objstate;
+         ^
+ugui.c:5530:10: style: The scope of the variable 'objtouch' can be reduced. [variableScope]
+   UG_U8 objtouch;
+         ^
+ugui.c:5600:10: style: The scope of the variable 'objstate' can be reduced. [variableScope]
+   UG_U8 objstate;
+         ^
+ugui.c:5601:10: style: The scope of the variable 'objtouch' can be reduced. [variableScope]
+   UG_U8 objtouch;
+         ^
+ugui.c:5631:10: style: The scope of the variable 'objstate' can be reduced. [variableScope]
+   UG_U8 objstate;
+         ^
+ugui.c:5744:15: style: The scope of the variable 'wnd' can be reduced. [variableScope]
+   UG_WINDOW* wnd;
+              ^
+ugui.c:5973:11: style: The scope of the variable 'pos' can be reduced. [variableScope]
+   UG_S16 pos;
+          ^
+ugui.c:6485:11: style: The scope of the variable 'xs' can be reduced. [variableScope]
+   UG_S16 xs,ys,xe,ye;
+          ^
+ugui.c:6485:14: style: The scope of the variable 'ys' can be reduced. [variableScope]
+   UG_S16 xs,ys,xe,ye;
+             ^
+ugui.c:6485:17: style: The scope of the variable 'xe' can be reduced. [variableScope]
+   UG_S16 xs,ys,xe,ye;
+                ^
+ugui.c:6485:20: style: The scope of the variable 'ye' can be reduced. [variableScope]
+   UG_S16 xs,ys,xe,ye;
+                   ^
+ugui.c:6539:11: style: The scope of the variable 'i' can be reduced. [variableScope]
+   UG_U16 i,objcnt;
+          ^
+ugui.c:6539:13: style: The scope of the variable 'objcnt' can be reduced. [variableScope]
+   UG_U16 i,objcnt;
+            ^
+ugui.c:6540:15: style: The scope of the variable 'obj' can be reduced. [variableScope]
+   UG_OBJECT* obj;
+              ^
+ugui.c:7154:59: style:inconclusive: Function 'UG_CheckboxCreate' argument 2 names different: declaration 'btn' definition 'chb'. [funcArgNamesDifferent]
+UG_RESULT UG_CheckboxCreate( UG_WINDOW* wnd, UG_CHECKBOX* chb, UG_U8 id, UG_S16 xs, UG_S16 ys, UG_S16 xe, UG_S16 ye )
+                                                          ^
+ugui.h:996:59: note: Function 'UG_CheckboxCreate' argument 2 names different: declaration 'btn' definition 'chb'.
+UG_RESULT UG_CheckboxCreate( UG_WINDOW* wnd, UG_CHECKBOX* btn, UG_U8 id, UG_S16 xs, UG_S16 ys, UG_S16 xe, UG_S16 ye );
+                                                          ^
+ugui.c:7154:59: note: Function 'UG_CheckboxCreate' argument 2 names different: declaration 'btn' definition 'chb'.
+UG_RESULT UG_CheckboxCreate( UG_WINDOW* wnd, UG_CHECKBOX* chb, UG_U8 id, UG_S16 xs, UG_S16 ys, UG_S16 xe, UG_S16 ye )
+                                                          ^
+ugui.c:5467:18: style: Variable 'obj' is assigned a value that is never used. [unreadVariable]
+   UG_OBJECT* obj=(UG_OBJECT*)wnd->objlst;
+                 ^
+ugui.c:5484:18: style: Variable 'obj' is assigned a value that is never used. [unreadVariable]
+   UG_OBJECT* obj=(UG_OBJECT*)wnd->objlst;
+                 ^
+ugui.c:6492:10: style: Variable 'ye' is assigned a value that is never used. [unreadVariable]
+      ye = wnd->ye;
+         ^
+ugui.c:6500:12: style: Variable 'ye' is assigned a value that is never used. [unreadVariable]
+         ye-=3;
+           ^
+ugui.c:4582:21: style: Variable 'g->desktop_color' is reassigned a value before the old one has been used. [redundantAssignment]
+   g->desktop_color = 0x5C5D;
+                    ^
+ugui.c:4579:21: note: g->desktop_color is assigned
+   g->desktop_color = 0x5E8BEf;
+                    ^
+ugui.c:4582:21: note: g->desktop_color is overwritten
+   g->desktop_color = 0x5C5D;
+                    ^
+ugui.c:5881:12: style: Variable 'wnd->bc' is reassigned a value before the old one has been used. [redundantAssignment]
+   wnd->bc = 0xEF7D;
+           ^
+ugui.c:5877:12: note: wnd->bc is assigned
+   wnd->bc = 0xF0F0F0;
+           ^
+ugui.c:5881:12: note: wnd->bc is overwritten
+   wnd->bc = 0xEF7D;
+           ^
+ugui.c:6616:0: style: The function 'UG_ButtonCreate' is never used. [unusedFunction]
+
+^
+ugui.c:6658:0: style: The function 'UG_ButtonDelete' is never used. [unusedFunction]
+
+^
+ugui.c:7013:0: style: The function 'UG_ButtonGetAlignment' is never used. [unusedFunction]
+
+^
+ugui.c:6923:0: style: The function 'UG_ButtonGetAlternateBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:6908:0: style: The function 'UG_ButtonGetAlternateForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:6893:0: style: The function 'UG_ButtonGetBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:6953:0: style: The function 'UG_ButtonGetFont' is never used. [unusedFunction]
+
+^
+ugui.c:6878:0: style: The function 'UG_ButtonGetForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:6983:0: style: The function 'UG_ButtonGetHSpace' is never used. [unusedFunction]
+
+^
+ugui.c:6968:0: style: The function 'UG_ButtonGetStyle' is never used. [unusedFunction]
+
+^
+ugui.c:6938:0: style: The function 'UG_ButtonGetText' is never used. [unusedFunction]
+
+^
+ugui.c:6998:0: style: The function 'UG_ButtonGetVSpace' is never used. [unusedFunction]
+
+^
+ugui.c:6676:0: style: The function 'UG_ButtonHide' is never used. [unusedFunction]
+
+^
+ugui.c:6863:0: style: The function 'UG_ButtonSetAlignment' is never used. [unusedFunction]
+
+^
+ugui.c:6740:0: style: The function 'UG_ButtonSetAlternateBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:6725:0: style: The function 'UG_ButtonSetAlternateForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:6710:0: style: The function 'UG_ButtonSetBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:6770:0: style: The function 'UG_ButtonSetFont' is never used. [unusedFunction]
+
+^
+ugui.c:6695:0: style: The function 'UG_ButtonSetForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:6833:0: style: The function 'UG_ButtonSetHSpace' is never used. [unusedFunction]
+
+^
+ugui.c:6785:0: style: The function 'UG_ButtonSetStyle' is never used. [unusedFunction]
+
+^
+ugui.c:6755:0: style: The function 'UG_ButtonSetText' is never used. [unusedFunction]
+
+^
+ugui.c:6848:0: style: The function 'UG_ButtonSetVSpace' is never used. [unusedFunction]
+
+^
+ugui.c:6663:0: style: The function 'UG_ButtonShow' is never used. [unusedFunction]
+
+^
+ugui.c:7154:0: style: The function 'UG_CheckboxCreate' is never used. [unusedFunction]
+
+^
+ugui.c:7197:0: style: The function 'UG_CheckboxDelete' is never used. [unusedFunction]
+
+^
+ugui.c:7583:0: style: The function 'UG_CheckboxGetAlignment' is never used. [unusedFunction]
+
+^
+ugui.c:7493:0: style: The function 'UG_CheckboxGetAlternateBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:7478:0: style: The function 'UG_CheckboxGetAlternateForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:7463:0: style: The function 'UG_CheckboxGetBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:7433:0: style: The function 'UG_CheckboxGetChecked' is never used. [unusedFunction]
+
+^
+ugui.c:7523:0: style: The function 'UG_CheckboxGetFont' is never used. [unusedFunction]
+
+^
+ugui.c:7448:0: style: The function 'UG_CheckboxGetForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:7553:0: style: The function 'UG_CheckboxGetHSpace' is never used. [unusedFunction]
+
+^
+ugui.c:7538:0: style: The function 'UG_CheckboxGetStyle' is never used. [unusedFunction]
+
+^
+ugui.c:7508:0: style: The function 'UG_CheckboxGetText' is never used. [unusedFunction]
+
+^
+ugui.c:7568:0: style: The function 'UG_CheckboxGetVSpace' is never used. [unusedFunction]
+
+^
+ugui.c:7215:0: style: The function 'UG_CheckboxHide' is never used. [unusedFunction]
+
+^
+ugui.c:7418:0: style: The function 'UG_CheckboxSetAlignment' is never used. [unusedFunction]
+
+^
+ugui.c:7295:0: style: The function 'UG_CheckboxSetAlternateBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:7280:0: style: The function 'UG_CheckboxSetAlternateForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:7265:0: style: The function 'UG_CheckboxSetBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:7234:0: style: The function 'UG_CheckboxSetCheched' is never used. [unusedFunction]
+
+^
+ugui.c:7325:0: style: The function 'UG_CheckboxSetFont' is never used. [unusedFunction]
+
+^
+ugui.c:7250:0: style: The function 'UG_CheckboxSetForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:7388:0: style: The function 'UG_CheckboxSetHSpace' is never used. [unusedFunction]
+
+^
+ugui.c:7340:0: style: The function 'UG_CheckboxSetStyle' is never used. [unusedFunction]
+
+^
+ugui.c:7310:0: style: The function 'UG_CheckboxSetText' is never used. [unusedFunction]
+
+^
+ugui.c:7403:0: style: The function 'UG_CheckboxSetVSpace' is never used. [unusedFunction]
+
+^
+ugui.c:7202:0: style: The function 'UG_CheckboxShow' is never used. [unusedFunction]
+
+^
+ugui.c:4976:0: style: The function 'UG_ConsolePutString' is never used. [unusedFunction]
+
+^
+ugui.c:5011:0: style: The function 'UG_ConsoleSetArea' is never used. [unusedFunction]
+
+^
+ugui.c:5024:0: style: The function 'UG_ConsoleSetBackcolor' is never used. [unusedFunction]
+
+^
+ugui.c:5019:0: style: The function 'UG_ConsoleSetForecolor' is never used. [unusedFunction]
+
+^
+ugui.c:4699:0: style: The function 'UG_DrawMesh' is never used. [unusedFunction]
+
+^
+ugui.c:4733:0: style: The function 'UG_DrawRoundFrame' is never used. [unusedFunction]
+
+^
+ugui.c:5730:0: style: The function 'UG_DriverDisable' is never used. [unusedFunction]
+
+^
+ugui.c:5721:0: style: The function 'UG_DriverEnable' is never used. [unusedFunction]
+
+^
+ugui.c:5713:0: style: The function 'UG_DriverRegister' is never used. [unusedFunction]
+
+^
+ugui.c:4804:0: style: The function 'UG_FillCircle' is never used. [unusedFunction]
+
+^
+ugui.c:4649:0: style: The function 'UG_FillRoundFrame' is never used. [unusedFunction]
+
+^
+ugui.c:4612:0: style: The function 'UG_FillScreen' is never used. [unusedFunction]
+
+^
+ugui.c:4607:0: style: The function 'UG_FontSelect' is never used. [unusedFunction]
+
+^
+ugui.c:5049:0: style: The function 'UG_FontSetHSpace' is never used. [unusedFunction]
+
+^
+ugui.c:5054:0: style: The function 'UG_FontSetVSpace' is never used. [unusedFunction]
+
+^
+ugui.c:8106:0: style: The function 'UG_ImageCreate' is never used. [unusedFunction]
+
+^
+ugui.c:8140:0: style: The function 'UG_ImageDelete' is never used. [unusedFunction]
+
+^
+ugui.c:8158:0: style: The function 'UG_ImageHide' is never used. [unusedFunction]
+
+^
+ugui.c:8171:0: style: The function 'UG_ImageSetBMP' is never used. [unusedFunction]
+
+^
+ugui.c:8145:0: style: The function 'UG_ImageShow' is never used. [unusedFunction]
+
+^
+ugui.c:4557:0: style: The function 'UG_Init' is never used. [unusedFunction]
+
+^
+ugui.c:4939:0: style: The function 'UG_PutString' is never used. [unusedFunction]
+
+^
+ugui.c:4601:0: style: The function 'UG_SelectGUI' is never used. [unusedFunction]
+
+^
+ugui.c:5034:0: style: The function 'UG_SetBackcolor' is never used. [unusedFunction]
+
+^
+ugui.c:5029:0: style: The function 'UG_SetForecolor' is never used. [unusedFunction]
+
+^
+ugui.c:7755:0: style: The function 'UG_TextboxCreate' is never used. [unusedFunction]
+
+^
+ugui.c:7796:0: style: The function 'UG_TextboxDelete' is never used. [unusedFunction]
+
+^
+ugui.c:8022:0: style: The function 'UG_TextboxGetAlignment' is never used. [unusedFunction]
+
+^
+ugui.c:7947:0: style: The function 'UG_TextboxGetBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:7977:0: style: The function 'UG_TextboxGetFont' is never used. [unusedFunction]
+
+^
+ugui.c:7932:0: style: The function 'UG_TextboxGetForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:7992:0: style: The function 'UG_TextboxGetHSpace' is never used. [unusedFunction]
+
+^
+ugui.c:7962:0: style: The function 'UG_TextboxGetText' is never used. [unusedFunction]
+
+^
+ugui.c:8007:0: style: The function 'UG_TextboxGetVSpace' is never used. [unusedFunction]
+
+^
+ugui.c:7814:0: style: The function 'UG_TextboxHide' is never used. [unusedFunction]
+
+^
+ugui.c:7917:0: style: The function 'UG_TextboxSetAlignment' is never used. [unusedFunction]
+
+^
+ugui.c:7842:0: style: The function 'UG_TextboxSetBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:7872:0: style: The function 'UG_TextboxSetFont' is never used. [unusedFunction]
+
+^
+ugui.c:7827:0: style: The function 'UG_TextboxSetForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:7887:0: style: The function 'UG_TextboxSetHSpace' is never used. [unusedFunction]
+
+^
+ugui.c:7857:0: style: The function 'UG_TextboxSetText' is never used. [unusedFunction]
+
+^
+ugui.c:7902:0: style: The function 'UG_TextboxSetVSpace' is never used. [unusedFunction]
+
+^
+ugui.c:7801:0: style: The function 'UG_TextboxShow' is never used. [unusedFunction]
+
+^
+ugui.c:5846:0: style: The function 'UG_TouchUpdate' is never used. [unusedFunction]
+
+^
+ugui.c:5742:0: style: The function 'UG_Update' is never used. [unusedFunction]
+
+^
+ugui.c:5794:0: style: The function 'UG_WaitForUpdate' is never used. [unusedFunction]
+
+^
+ugui.c:6012:0: style: The function 'UG_WindowAlert' is never used. [unusedFunction]
+
+^
+ugui.c:5856:0: style: The function 'UG_WindowCreate' is never used. [unusedFunction]
+
+^
+ugui.c:5906:0: style: The function 'UG_WindowDelete' is never used. [unusedFunction]
+
+^
+ugui.c:6241:0: style: The function 'UG_WindowGetBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:6231:0: style: The function 'UG_WindowGetForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:6452:0: style: The function 'UG_WindowGetInnerHeight' is never used. [unusedFunction]
+
+^
+ugui.c:6425:0: style: The function 'UG_WindowGetInnerWidth' is never used. [unusedFunction]
+
+^
+ugui.c:6470:0: style: The function 'UG_WindowGetOuterHeight' is never used. [unusedFunction]
+
+^
+ugui.c:6440:0: style: The function 'UG_WindowGetOuterWidth' is never used. [unusedFunction]
+
+^
+ugui.c:6391:0: style: The function 'UG_WindowGetStyle' is never used. [unusedFunction]
+
+^
+ugui.c:6341:0: style: The function 'UG_WindowGetTitleHeight' is never used. [unusedFunction]
+
+^
+ugui.c:6281:0: style: The function 'UG_WindowGetTitleInactiveColor' is never used. [unusedFunction]
+
+^
+ugui.c:6271:0: style: The function 'UG_WindowGetTitleInactiveTextColor' is never used. [unusedFunction]
+
+^
+ugui.c:6291:0: style: The function 'UG_WindowGetTitleText' is never used. [unusedFunction]
+
+^
+ugui.c:6331:0: style: The function 'UG_WindowGetTitleTextAlignment' is never used. [unusedFunction]
+
+^
+ugui.c:6301:0: style: The function 'UG_WindowGetTitleTextFont' is never used. [unusedFunction]
+
+^
+ugui.c:6311:0: style: The function 'UG_WindowGetTitleTextHSpace' is never used. [unusedFunction]
+
+^
+ugui.c:6321:0: style: The function 'UG_WindowGetTitleTextVSpace' is never used. [unusedFunction]
+
+^
+ugui.c:6371:0: style: The function 'UG_WindowGetXEnd' is never used. [unusedFunction]
+
+^
+ugui.c:6351:0: style: The function 'UG_WindowGetXStart' is never used. [unusedFunction]
+
+^
+ugui.c:6381:0: style: The function 'UG_WindowGetYEnd' is never used. [unusedFunction]
+
+^
+ugui.c:6361:0: style: The function 'UG_WindowGetYStart' is never used. [unusedFunction]
+
+^
+ugui.c:5940:0: style: The function 'UG_WindowHide' is never used. [unusedFunction]
+
+^
+ugui.c:6032:0: style: The function 'UG_WindowSetBackColor' is never used. [unusedFunction]
+
+^
+ugui.c:6021:0: style: The function 'UG_WindowSetForeColor' is never used. [unusedFunction]
+
+^
+ugui.c:6203:0: style: The function 'UG_WindowSetStyle' is never used. [unusedFunction]
+
+^
+ugui.c:6147:0: style: The function 'UG_WindowSetTitleHeight' is never used. [unusedFunction]
+
+^
+ugui.c:6076:0: style: The function 'UG_WindowSetTitleInactiveColor' is never used. [unusedFunction]
+
+^
+ugui.c:6065:0: style: The function 'UG_WindowSetTitleInactiveTextColor' is never used. [unusedFunction]
+
+^
+ugui.c:6087:0: style: The function 'UG_WindowSetTitleText' is never used. [unusedFunction]
+
+^
+ugui.c:6136:0: style: The function 'UG_WindowSetTitleTextAlignment' is never used. [unusedFunction]
+
+^
+ugui.c:6098:0: style: The function 'UG_WindowSetTitleTextFont' is never used. [unusedFunction]
+
+^
+ugui.c:6114:0: style: The function 'UG_WindowSetTitleTextHSpace' is never used. [unusedFunction]
+
+^
+ugui.c:6125:0: style: The function 'UG_WindowSetTitleTextVSpace' is never used. [unusedFunction]
+
+^
+ugui.c:6181:0: style: The function 'UG_WindowSetXEnd' is never used. [unusedFunction]
+
+^
+ugui.c:6159:0: style: The function 'UG_WindowSetXStart' is never used. [unusedFunction]
+
+^
+ugui.c:6192:0: style: The function 'UG_WindowSetYEnd' is never used. [unusedFunction]
+
+^
+ugui.c:6170:0: style: The function 'UG_WindowSetYStart' is never used. [unusedFunction]
+
+^
+ugui.c:5927:0: style: The function 'UG_WindowShow' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
